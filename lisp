@@ -2,8 +2,6 @@
   (cond ((null w) nil)
         ((equal (car w) x) (cons n (search x (cdr w) (+ n 1))))
         (t (search x (cdr w) (+ n 1)))))
- 
-(print (search 'a '(8 3 a 6 a 1)))
 
 (defun odd_sum (ls)
     (if ls
@@ -11,9 +9,6 @@
         '0
     )
 )
-
-(princ (odd_sum '(1 3 1 5 1 5 1 1 1)))
-
 
 (defun inf-to-pref(l)
     (eval(cond 
@@ -23,4 +18,6 @@
     ))
 )
 
-(princ(inf-to-pref '((2 + 6) / (2 + 2))))
+(print (odd_sum '(1 3 1 5 1 5 1 1 1)))
+(print (inf-to-pref '((-8 + 10) * (12 / 3))))
+(print (search 'a '(3 3 a 2 a 12)))
